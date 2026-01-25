@@ -1,0 +1,117 @@
+.hero {
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    background-color: $darkRed;
+    overflow: hidden;
+    border-radius: 19px;
+    padding: 4.5rem 5.9rem 7.3rem 6.2rem;
+    background-image: url('../img/hero/bg.png');
+    background-size: contain;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-size: 15rem;
+    font-family: $mossport;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin: 0 0 0 -0.3rem;
+  }
+
+  &__subtitle {
+    max-width: 35.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+    font-family: $monserrat;
+    margin: 1.1rem 0 0;
+  }
+
+  &__title-box {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    background-color: $red;
+    padding: 0.5rem 2.3rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    border-radius: 20px;
+    margin: 1.3rem 0 5rem;
+    font-family: $monserrat;
+  }
+
+  &__bullits {
+    display: flex;
+    gap: 4.5rem;
+    margin: 0 0 9.1rem;
+  }
+
+  &__bullit-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 1rem 0 1rem;
+    line-height: 1;
+  }
+
+  &__bullit-text {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: $monserrat;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $white;
+    padding: 0.5rem 2.1rem;
+    height: 4.5rem;
+    color: $red;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: $monserrat;
+    z-index: 3;
+
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+
+  }
+
+  &__logos {
+    margin-top: 1.2rem;
+    width: auto !important;
+    gap: 3.2rem !important;
+  }
+}

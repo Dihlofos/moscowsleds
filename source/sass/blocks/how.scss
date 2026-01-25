@@ -1,0 +1,128 @@
+.how {
+  padding: 19.6rem 0 13.7rem;
+
+  &__title {
+    margin: 0 0 7.4rem;
+  }
+
+  &__tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.9rem;
+  }
+
+  &__tip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: $darkRed;
+    border-radius: 19px;
+    overflow: hidden;
+    height: 40.6rem;
+
+  }
+
+  &__tip-content {
+    display: flex;
+    gap: 3rem;
+    padding: 5.2rem 2.7rem 0 4.71rem;
+  }
+
+  &__tip-number {
+    font-family: $mossport;
+    line-height: 0.75;
+    font-size: 10rem;
+  }
+
+  &__tip-text {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 500;
+    font-family: $monserrat;
+  }
+
+  &__tip-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    flex-shrink: 0;
+    img {
+      max-width: unset;
+    }
+  }
+
+  &__nominate-title {
+    font-family: $mossport;
+    font-size: 5rem;
+    line-height: 1.01;
+    text-transform: uppercase;
+    color: $red;
+    text-align: center;
+    margin: 8.6rem 0 3.5rem;
+
+    b {
+      color: $darkRed
+    }
+  }
+
+  &__nominate-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.6rem;
+    margin: 0 auto;
+    max-width: 88rem;
+  }
+
+  &__nominate-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $grey;
+  }
+
+  &__nominate-subtitle {
+    font-family: $mossport;
+    color: $red;
+    font-size: 3rem;
+    line-height: 1.01;
+    text-transform: uppercase;
+    margin: 0 0 0;
+  }
+
+  &__nominate-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: $monserrat;
+  }
+
+  &__registration-link {
+    display: block;
+    margin: 6.9rem auto 0;
+    background-color: $green;
+    color: $white;
+    font-family: $mossport;
+    color: $white;
+    font-size: 4rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 5.2rem;
+    border-radius: 30px;
+    width: 39rem;
+    text-align: center;
+    padding: 1.6rem 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $darkGreen;
+    }
+
+
+  }
+
+
+
+}

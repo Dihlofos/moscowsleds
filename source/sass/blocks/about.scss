@@ -1,0 +1,182 @@
+.about {
+  &__title {
+    margin: 0 0 8rem;
+  }
+  &__box-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 1.01;
+    color: $white;
+    margin: 0 0 2.2rem;
+
+    .about__box--red & {
+      margin: 0 0 2.4rem;
+    }
+  }
+
+  &__box {
+    position: relative;
+    background-color: $darkRed;
+    overflow: hidden;
+    border-radius: 19px;
+    padding: 2.8rem 3rem 3.7rem 3.2rem;
+    background-image: url('../img/about/darkBg.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 4.6rem;
+    }
+
+    &--red {
+      background-color: $red;
+      background-image: url('../img/about/redBg.jpg');
+      background-position: 295% -6%;
+      padding: 2.8rem 3rem 5.8rem 3.2rem;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+    pointer-events: none;
+
+    .about__box--red & {
+      bottom: auto;
+      top: 2.5rem;
+    }
+  }
+
+  &__bullits {
+    display: flex;
+    gap: 3.9rem;
+    margin: 0 0 4.5rem;
+
+    .about__box--red & {
+      gap: 6rem;
+    }
+  }
+
+  &__bullit {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    font-size: 3rem;
+    font-family: $mossport;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    gap: 1rem;
+
+    &--wrap {
+      flex-wrap: wrap;
+      max-width: 50rem;
+      margin: 0 0 6rem;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 1.3rem 1.5rem 1.5rem 2rem;
+    color: $grey;
+    width: 24.4rem;
+  }
+
+  &__item-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    line-height: 1;
+    color: $red;
+    max-width: 19rem;
+  }
+
+  &__item-text {
+    font-size: 1.4rem;
+    line-height: normal;
+    margin: 0;
+  }
+
+    &__bottom {
+      display: grid;
+      grid-template-columns: 35.4rem 71rem;
+      gap: 3.9rem;
+
+    }
+
+
+  &__stars {
+    width: 35.4rem;
+    flex-shrink: 0;
+  }
+
+  &__stars-title {
+    font-family: $mossport;
+    font-size: 3rem;
+    line-height: 1.01;
+    text-transform: uppercase;
+    margin: 0 0 2.6rem;
+  }
+
+  &__stars-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: normal;
+    p:not(:last-child) {
+      margin: 0 0 2.4rem;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding: 0 7.5rem;
+    margin-top: 5.5rem;
+  }
+
+  &__slide {
+    width: 16rem;
+  }
+
+  &__slide-image {
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 0 2.1rem;
+  }
+
+  &__slide-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.01;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__slide-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 6.2rem;
+    left: 0;
+
+    &--next {
+      left: auto;
+      right: 0;
+    }
+  }
+}

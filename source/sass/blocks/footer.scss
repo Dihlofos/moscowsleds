@@ -1,0 +1,377 @@
+.footer {
+  position: relative;
+  padding: 10.9rem 0 0;
+  font-family: $monserrat;
+  background-color: $darkRed;
+  color: $white;
+  border-radius: 19px;
+
+  @media (max-width: $mobile) {
+    padding: 4.4rem 0 28rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+    padding: 0px 0 20rem;
+  }
+
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      margin: 2rem 0 0;
+    }
+
+    @media (max-width: $tablet) {
+      margin: 1rem 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 1rem 0 3.4rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12rem;
+
+
+    &--title {
+      margin: 0 0 8.8rem;
+
+      @media (max-width: $tablet) {
+        margin: 0 0 5rem;
+      }
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        margin: 0 0 4rem;
+      }
+
+      .footer__right {
+        margin-top: 1.5rem;
+
+        @media (max-width: $laptop) {
+          width: 60rem;
+          margin-top: 0;
+        }
+
+        @media (max-width: $tablet) {
+          width: auto;
+        }
+
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--second {
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: 4rem;
+        margin: 0 0 4rem;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 3rem;
+        gap: 3rem;
+      }
+
+    }
+
+    &--bottom {
+      align-items: flex-end;
+      margin-top: -16.8rem;
+
+      @media (max-width: $tablet) {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+      }
+    }
+  }
+
+  &__underground {
+    margin: 6.4rem 0 3.5rem;
+  }
+
+  &__winter-logo {
+    padding: 1.8rem 3.8rem;
+    border-radius: 19px;
+    background-color: $darkRed;
+
+    @media (max-width: $tablet) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-right: 0;
+    }
+
+    @media (max-width: $mobile) {
+      flex-shrink: 0;
+      padding: 1.2rem 0 1.3rem 1rem;
+      border-radius: 12px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+
+      img {
+        width: auto;
+        height: 1.4rem;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0.9rem;
+    right: -21.3rem;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+
+    &--lights {
+      right: -1.2rem;
+      z-index: 0;
+      bottom: 4.6rem;
+    }
+  }
+
+  &__texture {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    height: 46rem;
+    width: 100%;
+    background-image: url(../img/texture2.png);
+    background-repeat: repeat;
+    background-position: -0.8rem 97.2rem;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    background-size: 95.9rem;
+    z-index: 3;
+
+    @media (max-width: $mobile) {
+      height: 24rem;
+      width: 100%;
+      background-image: url(../img/texture2.png);
+      background-repeat: repeat;
+      background-position: -0.5rem 76rem;
+      border-top-left-radius: 19px;
+      border-top-right-radius: 19px;
+      background-size: 38.2rem;
+      z-index: 1;
+    }
+  }
+
+  &__right {
+    width: 62rem;
+    margin-right: -6rem;
+
+
+    @media (max-width: $tablet) {
+      margin-right: 0;
+      width: auto;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+    &__logos {
+      display: inline-flex;;
+      gap: 3.7rem;
+      background-color: $red;
+      border-radius: 19px;
+      padding: 2rem 2.5rem;
+      margin-left: -1rem;
+
+      .header__logo {
+        background-color: $red;
+      }
+
+
+      @media (max-width: $laptop) {
+        margin-left: -7rem;
+      }
+
+      @media (max-width: $tablet) {
+        gap: 3rem;
+      }
+
+      @media (max-width: $mobile) {
+        margin-left: 0;
+        width: 100%;
+        border-radius: 12px;
+        padding: 1.6rem 1.5rem;
+        gap: 2rem;
+        background-color: $red;
+        justify-content: space-between;
+
+        .logos__logo {
+          img, svg {
+            height: 2rem;
+            width: auto;
+          }
+
+        }
+      }
+
+    }
+
+  &__contacts {
+    display: flex;
+    gap: 7.5rem;
+
+    @media (max-width: $laptop) {
+      gap: 3.5rem;
+    }
+
+    @media (max-width: $tablet) {
+      gap: 3.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      gap: 5.5rem;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    line-height: 1.01;
+    text-transform: uppercase;
+    font-family: $mossport;
+    color: $darkGreen;
+    gap: 1.5rem;
+
+    @media(max-width: $mobile) {
+      font-size: 2rem;
+      gap: 1rem;
+      img {
+        width: 3rem;
+      }
+
+    }
+  }
+
+  &__email {
+    margin: 0 0 4.9rem;
+    h6 {
+      text-transform: uppercase;
+      font-family: $mossport;
+      font-size: 3rem;
+      margin: 0 0 0.5rem;
+
+      @media (max-width: $mobile) {
+        font-size: 1.2rem;
+        margin: 0 0 0.6rem;
+      }
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    a {
+      display: block;
+      color: $white;
+      font-size: 1.6rem;
+      font-family: 400px;
+      line-height: normal;
+      font-family: $monserrat;
+      text-decoration: underline;
+      transition: 0.2s ease-in;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: -0.7rem;
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 28.7rem;
+
+    p {
+      margin: -0.7rem 0 2rem;
+      font-size: 1.6rem;
+    }
+
+    li:not(:last-child) {
+      margin: 0 0 2.1rem;
+
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 2.3rem;
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+      max-width: 95%;
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      ul {
+        padding-left: 1.8rem;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding-left: 0.3rem;
+
+  }
+  &__policy-link {
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 1.3rem;
+    line-height: normal;
+    max-width: 28rem;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+    }
+  }
+}

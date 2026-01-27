@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="title" content="Московские сани" />
     <meta
@@ -114,7 +115,6 @@
                 >
               </li>
             </ul>
-
             <img class="nav__decor" src="img/about/downhill.png" alt="" width="504" height="539">
           </div>
         </nav>
@@ -160,7 +160,10 @@
                   </li>
                 </ul>
               </nav>
-              <a href="#" class="header__link" target="_blank">Регистрация команд</a>
+              <div class="header__reg">
+                <a href="#" class="header__link" target="_blank">Регистрация команд</a>
+                <a href="#" class="header__link" target="_blank">Регистрация команд</a>
+              </div>
             </div>
           </div>
         </header>
@@ -198,17 +201,17 @@
               </div>
               <div class="hero__right">
                 <div class="hero__logos logos">
-                  <a href="https://www.mos.ru/" class="logos__logo desktop-hidden" target="_blank">
+                  <a href="https://www.mos.ru/" class="logos__logo" target="_blank">
                     <img src="img/logos/major.svg" width="58" height="29" />
                   </a>
                   <a href="https://zima.mos.ru/" class="header__logo" target="_blank">
                     <img src="img/logos/winter-in-moscow.svg" alt="Зима в Москве"  width="69" height="27">
                   </a>
 
-                  <a href="https://www.mos.ru/moskomsport/" class="logos__logo desktop-hidden" target="_blank">
+                  <a href="https://www.mos.ru/moskomsport/" class="logos__logo" target="_blank">
                     <img src="img/logos/dep.svg" width="86" height="28" />
                   </a>
-                  <a href="https://sport.mos.ru/" class="logos__logo desktop-hidden" target="_blank">
+                  <a href="https://sport.mos.ru/" class="logos__logo" target="_blank">
                     <img src="img/logos/mossport.svg" width="90" height="26" />
                   </a>
                 </div>
@@ -370,6 +373,10 @@
                   <p class="about__item-text">Заезды команд с&nbsp;оценкой креатива, артистизма и&nbsp;скорости</p>
                 </div>
                 <div class="about__item">
+                  <h3 class="about__item-title">Заезды на тюбингах</h3>
+                  <p class="about__item-text">Заезды команд с&nbsp;оценкой креатива, артистизма и&nbsp;скорости</p>
+                </div>
+                <div class="about__item">
                   <h3 class="about__item-title">Звездные команды</h3>
                   <p class="about__item-text">В&nbsp;соревнованиях участвуют известные спортсмены, артисты и&nbsp;медийные гости</p>
                 </div>
@@ -380,6 +387,10 @@
                 <div class="about__item">
                   <h3 class="about__item-title">Шоу-программа<br/> и диджей-сеты</h3>
                   <p class="about__item-text">Выступление артистов, розыгрыш подарков и&nbsp;музыка в&nbsp;течение дня</p>
+                </div>
+                <div class="about__item">
+                  <h3 class="about__item-title">Создание кастомных тюбингов</h3>
+                  <p class="about__item-text">В творческой мастерской гости выбирают материалы для декора и создают тематические тюбинги для соревнований.</p>
                 </div>
 
               </div>
@@ -497,7 +508,10 @@
                 <div class="how__nominate-text">Время спуска</div>
               </div>
             </div>
-            <a href="#" class="how__registration-link">Регистрация команд</a>
+            <div class="how__reg">
+              <a href="#" class="how__registration-link">Регистрация команд</a>
+              <a href="#" class="how__registration-link how__registration-link--red">Регистрация команд</a>
+            </div>
           </div>
         </section>
         <section class="actions">

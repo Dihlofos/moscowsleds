@@ -163,9 +163,16 @@
     font-family: $monserrat;
   }
 
+  &__reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6.9rem auto 0;
+    gap: 1.5rem;
+  }
+
   &__registration-link {
     display: block;
-    margin: 6.9rem auto 0;
     background-color: $green;
     color: $white;
     font-family: $mossport;
@@ -181,8 +188,16 @@
     padding: 1.6rem 0;
     transition: all 0.3s ease;
 
+    &--red {
+      background-color: $red;
+    }
+
     &:hover {
       background-color: $darkGreen;
+
+      &--red {
+        background-color: $darkRed;
+      }
     }
 
     @media (max-width: $mobile) {

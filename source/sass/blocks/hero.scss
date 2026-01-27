@@ -6,6 +6,10 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-grow: 1;
+
+    @media (max-width: $tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__box {
@@ -20,6 +24,16 @@
     background-size: contain;
     background-position: 100% 100%;
     background-repeat: no-repeat;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: 3rem;
+      padding: 2.4rem 3.2rem 6rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 2.4rem 1.6rem 26rem;
+    }
   }
 
   &__title {
@@ -28,6 +42,14 @@
     text-transform: uppercase;
     line-height: 0.9;
     margin: 0 0 0 -0.3rem;
+
+    @media (max-width: $laptop) {
+      font-size: 12rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 8rem;
+    }
   }
 
   &__subtitle {
@@ -37,11 +59,24 @@
     line-height: normal;
     font-family: $monserrat;
     margin: 1.1rem 0 0;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__title-box {
     display: flex;
     gap: 1.6rem;
+  }
+
+  &__bullit {
+    svg {
+      @media (max-width: $mobile) {
+        width: 3.2rem;
+        height: auto;
+      }
+    }
   }
 
   &__label {
@@ -56,12 +91,20 @@
     border-radius: 20px;
     margin: 1.3rem 0 5rem;
     font-family: $monserrat;
+
+    @media (max-width: $mobile) {
+      margin: 3.3rem 0 4rem;
+    }
   }
 
   &__bullits {
     display: flex;
     gap: 4.5rem;
     margin: 0 0 9.1rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4.1rem;
+    }
   }
 
   &__bullit-title {
@@ -70,12 +113,20 @@
     font-size: 3rem;
     margin: 1rem 0 1rem;
     line-height: 1;
+
+    @media (max-width: $tablet) {
+      font-size: 2.6rem;
+    }
   }
 
   &__bullit-text {
     font-size: 2rem;
     font-weight: 500;
     font-family: $monserrat;
+
+    @media (max-width: $tablet) {
+      font-size: 1.7rem;
+    }
   }
 
   &__link {
@@ -97,6 +148,22 @@
       background-color: $red;
       color: $white;
     }
+
+    @media (max-width: $tablet) {
+      &--mossport {
+        position: absolute;
+        bottom: 6rem;
+        right: 2rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+
+      &--mossport {
+        display: flex;
+      }
+    }
   }
 
   &__decor {
@@ -107,11 +174,27 @@
     pointer-events: none;
     z-index: 1;
 
+    @media (max-width: $laptop) {
+      width: 67rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: 45rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 34rem;
+    }
+
   }
 
   &__logos {
     margin-top: 1.2rem;
     width: auto !important;
     gap: 3.2rem !important;
+
+    @media (max-width: $mobile) {
+      gap: 1.2rem !important;
+    }
   }
 }

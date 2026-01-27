@@ -6,8 +6,14 @@
   color: $white;
   border-radius: 19px;
 
+  @media (max-width: $tablet) {
+    padding: 3.9rem 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   @media (max-width: $mobile) {
-    padding: 4.4rem 0 28rem;
+    padding: 3rem 0 0;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     overflow: hidden;
@@ -22,7 +28,7 @@
 
   &__title {
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 8.7rem;
 
     @media (max-width: $tablet) {
       margin: 2rem 0 0;
@@ -33,7 +39,7 @@
     }
 
     @media (max-width: $mobile) {
-      margin: 1rem 0 3.4rem;
+      margin: 0 0 2rem;
     }
   }
 
@@ -42,62 +48,27 @@
     align-items: flex-start;
     gap: 12rem;
 
-
-    &--title {
-      margin: 0 0 8.8rem;
-
-      @media (max-width: $tablet) {
-        margin: 0 0 5rem;
-      }
-
-      @media (max-width: $mobile) {
-        flex-direction: column;
-        margin: 0 0 4rem;
-      }
-
-      .footer__right {
-        margin-top: 1.5rem;
-
-        @media (max-width: $laptop) {
-          width: 60rem;
-          margin-top: 0;
-        }
-
-        @media (max-width: $tablet) {
-          width: auto;
-        }
-
-        @media (max-width: $mobile) {
-          width: 100%;
-        }
-      }
-    }
-
-    &--second {
-      @media (max-width: $tablet) {
-        flex-direction: column;
-        gap: 4rem;
-        margin: 0 0 4rem;
-      }
-
-      @media (max-width: $mobile) {
-        margin: 0 0 3rem;
-        gap: 3rem;
-      }
+    @media (max-width: $laptop) {
+      padding: 0 4.5rem;
+      gap: 2rem;
 
     }
 
-    &--bottom {
-      align-items: flex-end;
-      margin-top: -16.8rem;
-
-      @media (max-width: $tablet) {
-        margin-top: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5rem;
-      }
+    @media (max-width: $tablet) {
+      gap: 4rem;
+      margin: 0 0 4rem;
     }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0 0 3rem;
+      gap: 0;
+      padding: 0 1.6rem;
+    }
+
+
+
+
   }
 
   &__underground {
@@ -132,7 +103,7 @@
 
   &__decor {
     position: absolute;
-    bottom: 0.9rem;
+    bottom: 0;
     right: -21.3rem;
     user-select: none;
     pointer-events: none;
@@ -141,7 +112,29 @@
     &--lights {
       right: -1.2rem;
       z-index: 0;
-      bottom: 4.6rem;
+      bottom: 0;
+    }
+
+    @media (max-width: $laptop) {
+      width: 78rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: 50rem;
+      right: -10rem;
+
+      &--lights {
+        width: 78rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 37.5rem;
+
+      &--lights {
+        width: 51rem;
+        max-width: unset;
+      }
     }
   }
 
@@ -171,6 +164,13 @@
       border-top-right-radius: 19px;
       background-size: 38.2rem;
       z-index: 1;
+    }
+  }
+
+  &__left {
+    @media(max-width: $mobile) {
+      display: flex;
+      gap: 2rem;
     }
   }
 
@@ -270,6 +270,9 @@
 
   &__email {
     margin: 0 0 4.9rem;
+    @media (max-width: $mobile) {
+      margin: 0 0 3rem;
+    }
     h6 {
       text-transform: uppercase;
       font-family: $mossport;
@@ -277,7 +280,7 @@
       margin: 0 0 0.5rem;
 
       @media (max-width: $mobile) {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         margin: 0 0 0.6rem;
       }
     }
@@ -285,6 +288,10 @@
     span {
       font-size: 1.6rem;
       font-weight: 500;
+
+      @media (max-width: $mobile) {
+        font-size: 1.4rem;
+      }
     }
 
     a {
@@ -332,6 +339,7 @@
     @media (max-width: $mobile) {
       font-size: 1.4rem;
       max-width: 95%;
+      margin-top: 0;
 
       p {
         margin: 0 0 1rem;

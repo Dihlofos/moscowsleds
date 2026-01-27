@@ -1,6 +1,14 @@
 .partners {
   padding: 15.1rem 0 2.5rem;
 
+  @media (max-width: $tablet) {
+    padding: 9.1rem 0 2.5rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 6.1rem 0 0em;
+  }
+
   &__title {
     margin: 0 0 7rem;
   }
@@ -10,6 +18,10 @@
     justify-content: center;
     align-items: center;
     gap: 5.1rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
 

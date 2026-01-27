@@ -8,12 +8,16 @@
     position: relative;
   }
 
+  @media (max-width: $laptop) {
+    padding: 13.5rem 0 8.7rem;
+  }
+
   @media (max-width: $tablet) {
     padding: 4.4rem 0 3rem;
   }
 
   @media (max-width: $mobile) {
-    padding: 10.9rem 0 11rem;
+    padding: 6.9rem 0 7rem;
   }
 
   &__decor {
@@ -21,6 +25,15 @@
     top: 2.4rem;
     right: 3.5rem;
     z-index: 2;
+
+    @media (max-width: $tablet) {
+      top: 1.4rem;
+      right: 0.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 13rem;
+    }
   }
 
   &__box {
@@ -36,7 +49,7 @@
 
     @media (max-width: $mobile) {
       border-radius: 12px;
-      padding: 17.9rem 1.95rem 6rem;
+      padding: 10.9rem 1.95rem 1rem;
     }
   }
 
@@ -194,7 +207,7 @@
     @media (max-width: $tablet) {
       position: absolute;
       right: 0;
-      top: -0.5rem;
+      top: 0;
       width: 2.7rem;
       height: 2.7rem;
       margin: 0 0 0 5rem;

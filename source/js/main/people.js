@@ -6,7 +6,7 @@
 
   new Swiper(`.js-main-slider-concert`, {
     // Optional parameters
-    slidesPerView: vw > 1024 ? 3 : 1,
+    slidesPerView: vw > 767 ? 3 : 1,
     spaceBetween: 40,
     initialSlide: 0,
     draggable: false,
@@ -20,7 +20,7 @@
 
   new Swiper(`.js-actions-slider-concert`, {
     // Optional parameters
-    slidesPerView: vw > 1024 ? 3 : 1,
+    slidesPerView: vw > 767 ? 3 : 1,
     spaceBetween: 40,
     initialSlide: 0,
     draggable: false,

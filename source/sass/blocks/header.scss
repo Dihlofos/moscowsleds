@@ -37,7 +37,8 @@
     border-radius: 19px;
 
     @media (max-width: $tablet) {
-      padding-right: 6.5rem;
+      padding: 0 2.8rem 0 0;
+      background: none;
     }
   }
 
@@ -56,6 +57,13 @@
     &:hover {
       background-color: $darkRed;
       color: $white;
+    }
+
+    @media (max-width: $tablet) {
+      background-color: $red;
+      color: $white;
+      padding: 1rem 1.6rem;
+      height: auto;
     }
   }
 

@@ -1,7 +1,7 @@
 "use strict";
 (function () {
   const map = document.querySelector(".js-map");
-  const mapScroller = document.querySelector(".js-map-scroll");
+  const mapScrollers = document.querySelectorAll(".js-map-scroll");
   const mapModal = document.querySelector(".js-map-modal");
   const modalText = mapModal.querySelector(".js-map-modal-text");
   const modalGoTo = mapModal.querySelector(".js-map-modal-goto");
@@ -42,7 +42,9 @@
   };
 
   setTimeout(() => {
-    mapScroller?.scroll({ left: 135 });
+    mapScrollers.forEach((scroller) => {
+      scroller.scroll({ left: 110 });
+    });
   }, 500);
 
   figures.forEach((figure) => {
@@ -98,7 +100,7 @@
     let mapOffset =
       document.getElementById(idList).getBoundingClientRect().top +
       document.documentElement.scrollTop -
-      100;
+      115;
 
     const legendItem = document.querySelector(
       `.js-legend-item[data-legend-item-id="${locationNumber}"]`,

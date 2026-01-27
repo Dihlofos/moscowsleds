@@ -1,6 +1,10 @@
 .about {
   &__title {
     margin: 0 0 8rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4rem;
+    }
   }
   &__box-title {
     font-family: $mossport;
@@ -12,6 +16,14 @@
 
     .about__box--red & {
       margin: 0 0 2.4rem;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4.2rem;
     }
   }
 
@@ -34,7 +46,19 @@
       background-image: url('../img/about/redBg.jpg');
       background-position: 295% -6%;
       padding: 2.8rem 3rem 5.8rem 3.2rem;
+
+      @media (max-width: $tablet) {
+        background-position: 16rem 0;
+      }
     }
+
+    @media (max-width: $tablet) {
+      padding: 2.4rem 1.6rem 30rem;
+      &--red {
+        padding: 2.4rem 1.6rem;
+      }
+    }
+
   }
 
   &__decor {
@@ -48,6 +72,27 @@
       bottom: auto;
       top: 2.5rem;
     }
+
+    @media (max-width: $laptop) {
+      width: 29rem;
+
+      .about__box--red & {
+        width: 50rem;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      .about__box--red & {
+        width: 37rem;
+        top: 36.5rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      .about__box--red & {
+        display: none;
+      }
+    }
   }
 
   &__bullits {
@@ -58,6 +103,14 @@
     .about__box--red & {
       gap: 6rem;
     }
+
+    @media (max-width: $mobile) {
+      margin: 0px 0 1.5rem;
+      gap: 1rem;
+      .about__box--red & {
+        gap: 1rem;
+      }
+    }
   }
 
   &__bullit {
@@ -67,6 +120,17 @@
     font-size: 3rem;
     font-family: $mossport;
     text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+      gap: 1rem;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+
+      }
+    }
   }
 
   &__items {
@@ -78,6 +142,22 @@
       max-width: 50rem;
       margin: 0 0 6rem;
     }
+
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      width: 75rem;
+
+      &--wrap {
+        z-index: 5;
+        position: relative;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      // flex-wrap: nowrap;
+      // flex-direction: column;
+    }
   }
 
   &__item {
@@ -86,6 +166,11 @@
     padding: 1.3rem 1.5rem 1.5rem 2rem;
     color: $grey;
     width: 24.4rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      max-width: 45rem;
+    }
   }
 
   &__item-title {
@@ -108,6 +193,15 @@
       display: grid;
       grid-template-columns: 35.4rem 71rem;
       gap: 3.9rem;
+
+      @media (max-width: $laptop) {
+        grid-template-columns: 35.4rem 60rem;
+      }
+
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+      }
 
     }
 
@@ -138,6 +232,14 @@
     position: relative;
     padding: 0 7.5rem;
     margin-top: 5.5rem;
+
+    @media (max-width: $tablet) {
+      margin-top: -0.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0 4rem;
+    }
   }
 
   &__slide {
@@ -148,6 +250,19 @@
     overflow: hidden;
     border-radius: 10px;
     margin: 0 0 2.1rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__slide-content {
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__slide-title {
@@ -177,6 +292,16 @@
     &--next {
       left: auto;
       right: 0;
+    }
+
+    @media (max-width: $mobile) {
+      top: 10rem;
+      left: -0.5rem;
+
+      &--next {
+        left: auto;
+        right: -0.5rem;
+    }
     }
   }
 }

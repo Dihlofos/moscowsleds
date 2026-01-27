@@ -5,6 +5,7 @@
   const tabs = container.querySelectorAll(".js-tab");
   const contents = map.querySelectorAll(".js-tab-content");
   const route = document.querySelector(".js-route");
+  const mapScrollers = document.querySelectorAll(".js-map-scroll");
 
   const links = {
     luzhniki: "https://yandex.ru/maps/-/CLtxFHk7",
@@ -21,6 +22,8 @@
       );
       targetContent.classList.add("is-active");
       route.href = links[tabTarget];
+
+      doScroll();
     });
   });
 
@@ -31,6 +34,12 @@
 
     contents.forEach((content) => {
       content.classList.remove("is-active");
+    });
+  }
+
+  function doScroll() {
+    mapScrollers.forEach((scroller) => {
+      scroller.scroll({ left: 100 });
     });
   }
 })();

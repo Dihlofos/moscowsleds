@@ -80,7 +80,7 @@
 "use strict";
 (function () {
   const map = document.querySelector(".js-map");
-  const mapScroller = document.querySelector(".js-map-scroll");
+  const mapScrollers = document.querySelectorAll(".js-map-scroll");
   const mapModal = document.querySelector(".js-map-modal");
   const modalText = mapModal.querySelector(".js-map-modal-text");
   const modalGoTo = mapModal.querySelector(".js-map-modal-goto");
@@ -121,7 +121,9 @@
   };
 
   setTimeout(() => {
-    mapScroller?.scroll({ left: 135 });
+    mapScrollers.forEach((scroller) => {
+      scroller.scroll({ left: 110 });
+    });
   }, 500);
 
   figures.forEach((figure) => {
@@ -177,7 +179,7 @@
     let mapOffset =
       document.getElementById(idList).getBoundingClientRect().top +
       document.documentElement.scrollTop -
-      100;
+      115;
 
     const legendItem = document.querySelector(
       `.js-legend-item[data-legend-item-id="${locationNumber}"]`,
@@ -284,6 +286,7 @@
   const tabs = container.querySelectorAll(".js-tab");
   const contents = map.querySelectorAll(".js-tab-content");
   const route = document.querySelector(".js-route");
+  const mapScrollers = document.querySelectorAll(".js-map-scroll");
 
   const links = {
     luzhniki: "https://yandex.ru/maps/-/CLtxFHk7",
@@ -300,6 +303,8 @@
       );
       targetContent.classList.add("is-active");
       route.href = links[tabTarget];
+
+      doScroll();
     });
   });
 
@@ -310,6 +315,12 @@
 
     contents.forEach((content) => {
       content.classList.remove("is-active");
+    });
+  }
+
+  function doScroll() {
+    mapScrollers.forEach((scroller) => {
+      scroller.scroll({ left: 100 });
     });
   }
 })();
@@ -351,7 +362,7 @@
 
   new Swiper(`.js-main-slider-concert`, {
     // Optional parameters
-    slidesPerView: vw > 1024 ? 3 : 1,
+    slidesPerView: vw > 767 ? 3 : 1,
     spaceBetween: 40,
     initialSlide: 0,
     draggable: false,
@@ -365,7 +376,7 @@
 
   new Swiper(`.js-actions-slider-concert`, {
     // Optional parameters
-    slidesPerView: vw > 1024 ? 3 : 1,
+    slidesPerView: vw > 767 ? 3 : 1,
     spaceBetween: 40,
     initialSlide: 0,
     draggable: false,

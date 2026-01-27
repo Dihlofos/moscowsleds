@@ -96,6 +96,21 @@ img {
   display: none;
 }
 
+.mobile-hidden {
+  display: flex !important;
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  display: none !important;
+  @media (max-width: $mobile) {
+    display: flex !important;
+  }
+
+}
+
 
 
 

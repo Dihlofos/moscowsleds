@@ -1,6 +1,10 @@
 .actions {
   &__title {
     margin: 0 0 2.8rem;
+
+    @media(max-width: $mobile) {
+      margin: 0 0 1rem;
+    }
   }
 
   &__subtitle {
@@ -10,6 +14,11 @@
     text-transform: uppercase;
     text-align: center;
     margin: 0 0 10rem;
+
+    @media(max-width: $mobile) {
+      margin: 0 0 4rem;
+      line-height: 1;
+    }
   }
 
   &__decor {
@@ -20,11 +29,42 @@
     user-select: none;
     pointer-events: none;
 
+    @media (max-width: $laptop) {
+      width: 32rem;
+    }
+
     &--top {
       bottom: auto;
       top: 1.5rem;
       right: 2.4rem;
+
+      @media (max-width: $laptop) {
+        width: 22rem;
+      }
+
+      @media (max-width: $mobile) {
+        top: auto;
+        bottom: 0;
+      }
     }
+
+    &--rest {
+      @media (max-width: $laptop) {
+        width: 100%;
+      }
+
+      @media (max-width: $mobile) {
+        width: 159%;
+        max-width: 60rem;
+        right: -4rem;
+      }
+    }
+
+    .actions__box--people & {
+      @media (max-width: $mobile) {
+          display: none;
+        }
+      }
   }
 
   &__box {
@@ -51,7 +91,25 @@
     &--rest {
       padding: 2.8rem 3rem 26rem  3.2rem;
       background-position: 110% 0%;
+    }
 
+    @media (max-width: $laptop) {
+      background-size: cover;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 2.2rem 2.2rem 20.4rem;
+      background-image: url('../img/hero/bg.png');
+      background-size: 160%;
+      background-position: 100% 100%;
+
+      &--downhill {
+        padding-bottom: 10rem;
+      }
+
+      &--people {
+        padding-bottom: 10rem;
+      }
     }
   }
 
@@ -66,12 +124,23 @@
     .actions__box--rest & {
       margin: 0 0 4.5rem;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 4rem;
+      margin: 0 0 4rem;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5.2rem;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
   }
 
   &__box-description {
@@ -99,7 +168,6 @@
         height: 1px;
         background-color: $white;
         z-index: 2;
-
       }
     }
 
@@ -108,6 +176,7 @@
     }
 
     @media (max-width: $tablet) {
+      padding: 2.4rem 0;
       &.with-button {
         position: relative;
         padding: 3rem 0 7.5rem;
@@ -137,7 +206,7 @@
     flex-shrink: 0;
 
     @media (max-width: $mobile) {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       padding: .1rem 1.5rem
     }
   }
@@ -162,6 +231,25 @@
 
   }
 
+  &__column {
+    position: relative;
+    @media (max-width: $tablet) {
+      &:last-child {
+        &:after {
+          content: '';
+          position: absolute;
+          top: -2.4rem;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $white;
+          z-index: 2;
+        }
+
+      }
+    }
+  }
+
   &__content-title {
     font-family: $mossport;
     text-transform: uppercase;
@@ -170,7 +258,7 @@
     margin-top: 0.3rem;
 
     @media (max-width: $mobile) {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
     }
 
 
@@ -203,6 +291,14 @@
     padding: 0 7rem;
     margin-top: 5.5rem;
     width: 70rem;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0 4rem;
+    }
   }
 
   &__slide {
@@ -213,6 +309,10 @@
     overflow: hidden;
     border-radius: 10px;
     margin: 0 0 2.1rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &__slide-title {
@@ -242,6 +342,15 @@
     &--next {
       left: auto;
       right: 0;
+    }
+
+    @media (max-width: $mobile) {
+      left: -1rem;
+
+      &--next {
+        left: auto;
+        right: -1rem;
+      }
     }
   }
 }

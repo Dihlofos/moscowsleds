@@ -1,24 +1,39 @@
 .dummy {
-  padding-bottom: 5rem;
+  padding:2.4rem 0 2.4rem;
+  position: relative;
 
-  @media (max-width: $mobile) {
-    padding-bottom: 0rem;
+
+
+
+  .container {
+    position: relative;
   }
 
   &__box {
     position: relative;
-    border-radius: 19px;
-    background-color: $green;
+    background-color: $darkRed;
     overflow: hidden;
-    z-index: 3;
+    border-radius: 19px;
+    padding: 4.5rem 5.9rem 7.3rem 6.2rem;
+    background-image: url('../img/hero/bg.png');
+    background-size: contain;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
 
-    @media (max-width: $mobile) {
-      border-radius: 12px;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: 3rem;
+      padding: 2.4rem 3.2rem 6rem;
     }
 
-    &--dark {
-      background-color: $darkGreen;
-      margin: 0 0 4.1rem;
+    @media (max-width: $mobile) {
+      padding: 2.4rem 1.6rem 30rem;
+    }
+  }
+
+  .hero__decor {
+    @media(max-width: $tablet) {
+      width: 34rem;
     }
   }
 
@@ -124,22 +139,33 @@
   }
 
   &__link {
+    position: absolute;
+    top: 11rem;
+    right: 6rem;
     display: block;
-    margin: 8.3rem auto 28.3rem;
+    margin: 6rem 0 6rem;
     width: 25.6rem;
     height: 4.2rem;
     line-height: 1;
+    background-color: $white;
+    color: $darkRed;
+    z-index: 5;
 
     @media (max-width: $tablet) {
+      top: auto;
+      bottom: -4rem;
+      right: 2rem;
       width: 26rem;
+      font-size: 1.8rem;
       margin: 5.3rem auto 20.3rem;
     }
 
     @media (max-width: $mobile) {
       margin: 4.5rem auto 17.3rem;
       height: auto;
-      padding: 0.6rem 0.5rem;
-      width: 15.7rem;
+      bottom: -6rem;
+      padding: 0.8rem 0.5rem;
+      width: 22rem;
       font-size: 1.6rem;
     }
   }
@@ -193,10 +219,11 @@
     }
   }
 
+
   .logos {
     display: flex;
-    margin: 0 auto 3.1rem;
-    max-width: 99.7rem;
+    max-width: 86.7rem;
+    margin: 0 0 6rem;
     gap: 1rem;
     width: 100%;
     justify-content: space-between;
@@ -261,10 +288,8 @@
 
   &__description {
     font-family: $monserrat;
-    max-width: 85.6rem;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2rem;
+    max-width: 40rem;
+    font-size: 1.8rem;
     line-height: 1.01;
 
     p {
@@ -283,7 +308,6 @@
 
     @media (max-width: $mobile) {
       font-size: 1.4rem;
-      max-width: 26.6rem;
 
       p {
         margin: 0 0 1rem;
@@ -292,15 +316,7 @@
   }
 
   &__bullits {
-    display: flex;
-    justify-content: center;
-    gap: 4.5rem;
-    margin: 0 0 6.5rem;
-
-    @media (max-width: $mobile) {
-      gap: 1.3rem;
-      margin: 0 0 4rem;
-    }
+    margin: 6rem 0 5rem;
   }
 
   &__buttons {

@@ -11,6 +11,11 @@
 
   &__title {
     margin: 0 0 7.4rem;
+    font-size: 9.7rem;
+
+    @media (max-width: $tablet) {
+      font-size: 6rem;
+    }
 
     @media (max-width: $mobile) {
       margin: 0 0 4rem;
@@ -41,19 +46,20 @@
     background-color: $darkRed;
     border-radius: 19px;
     overflow: hidden;
-    height: 40.6rem;
+    height: 54.7rem;
 
     @media (max-width: $mobile) {
       align-items: flex-start;
-
+      height: auto;
+      padding-bottom: 26rem;
     }
 
   }
 
   &__tip-content {
     display: flex;
-    gap: 3rem;
-    padding: 5.2rem 2.7rem 0 4.71rem;
+    gap: 2.3rem;
+    padding: 5rem 0.7rem 0 3.71rem;
 
     @media (max-width: $tablet) {
       flex-direction: column;
@@ -82,15 +88,60 @@
   }
 
   &__tip-text {
-    font-size: 1.6rem;
-    line-height: 1.25;
-    font-weight: 500;
-    font-family: $monserrat;
+
+    h5 {
+      font-family: $mossport;
+      text-transform: uppercase;
+      font-size: 3rem;
+      line-height: 1.01;
+      margin: 0 0 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 500;
+      font-family: $monserrat;
+    }
+
+
+
 
     @media (max-width: $mobile) {
       max-width: 40rem;
     }
 
+
+  }
+
+  &__tip-link {
+    position: absolute;
+    bottom: 3.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28rem;
+    height: 5.2rem;
+    margin: 0 auto;
+    color: $white;
+    background-color: $green;
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    z-index: 6;
+    transform: all .3s ease;
+
+    &:hover {
+      background-color: $darkGreen;
+    }
+
+    @media(max-width: $tablet) {
+      font-size: 2.5rem;
+      width: calc(100% - 4rem);
+    }
 
   }
 

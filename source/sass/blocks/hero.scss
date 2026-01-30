@@ -72,6 +72,7 @@
   }
 
   &__bullit {
+    max-width: 24rem;
     svg {
       @media (max-width: $mobile) {
         width: 3.2rem;
@@ -100,7 +101,7 @@
 
   &__bullits {
     display: flex;
-    gap: 4.5rem;
+    gap: 2.5rem;
     margin: 0 0 9.1rem;
 
     @media (max-width: $mobile) {

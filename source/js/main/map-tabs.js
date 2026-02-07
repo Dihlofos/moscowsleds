@@ -39,7 +39,7 @@
 
   function doScroll() {
     mapScrollers.forEach((scroller) => {
-      scroller.scroll({ left: 100 });
+      //scroller.scroll({ left: 100 });
     });
   }
 })();

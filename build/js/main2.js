@@ -95,36 +95,41 @@
 
   const locations = {
     1: {
-      title: "Соревнования",
+      title: "Горка для заездов",
       time: "13:30–16:30",
     },
     2: {
-      title: "Сцена",
+      title: "стойка регистрации",
       time: "12:00–18:00",
     },
     3: {
-      title: "Активности",
+      title: "Сцена",
       time: "Время",
     },
     4: {
-      title: "Полевая кухня",
+      title: "Зона отдыха и еды",
       time: "Время",
     },
     5: {
-      title: "Зона отдыха",
-      time: "Время",
-    },
-    6: {
-      title: "Блинная",
+      title: "Спортивные активности",
       time: "Время",
     },
   };
 
-  setTimeout(() => {
-    mapScrollers.forEach((scroller) => {
-      scroller.scroll({ left: 110 });
-    });
-  }, 500);
+  scrollMobile();
+
+  function scrollMobile() {
+    setTimeout(() => {
+      mapScrollers.forEach((scroller) => {
+        console.log("scroller", scroller);
+        if (scroller.querySelector(".js-map-luzh")) {
+          scroller.scroll({ left: 270 });
+        } else {
+          scroller.scroll({ left: 180 });
+        }
+      });
+    }, 500);
+  }
 
   figures.forEach((figure) => {
     figure.addEventListener("click", () => {
@@ -273,7 +278,7 @@
       itemTime.textContent = time;
       itemP.prepend(itemSpan);
       itemLi.append(itemP);
-      itemLi.append(itemTime);
+      // itemLi.append(itemTime);
       container.append(itemLi);
     });
   }
@@ -320,7 +325,7 @@
 
   function doScroll() {
     mapScrollers.forEach((scroller) => {
-      scroller.scroll({ left: 100 });
+      //scroller.scroll({ left: 100 });
     });
   }
 })();
@@ -358,21 +363,21 @@
 (function () {
   const slider = document.querySelector(".js-main-slider-container");
   const vw = window.innerWidth;
-  const wrapper = slider.querySelector(".swiper-wrapper");
+  //const wrapper = slider.querySelector(".swiper-wrapper");
 
-  new Swiper(`.js-main-slider-concert`, {
-    // Optional parameters
-    slidesPerView: vw > 767 ? 3 : 1,
-    spaceBetween: 40,
-    initialSlide: 0,
-    draggable: false,
-    pagination: false,
-    loop: true,
-    navigation: {
-      nextEl: ".js-main-next-concert",
-      prevEl: ".js-main-prev-concert",
-    },
-  });
+  // new Swiper(`.js-main-slider-concert`, {
+  //   // Optional parameters
+  //   slidesPerView: vw > 767 ? 3 : 1,
+  //   spaceBetween: 40,
+  //   initialSlide: 0,
+  //   draggable: false,
+  //   pagination: false,
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: ".js-main-next-concert",
+  //     prevEl: ".js-main-prev-concert",
+  //   },
+  // });
 
   new Swiper(`.js-actions-slider-concert`, {
     // Optional parameters
